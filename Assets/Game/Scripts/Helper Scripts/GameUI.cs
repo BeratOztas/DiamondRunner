@@ -46,8 +46,7 @@ public class GameUI : MonoBehaviour
     public void WinScreen() {
         total_Diamond_Amount += playerInteraction.diamondAmount;
         total_Diamond5Side_Amount += playerInteraction.diamond_5_side_Amount;
-        Debug.Log("TOTAL DÝAMOND5SIDE : " + total_Diamond5Side_Amount);
-        Debug.Log("TOTAL DÝAMOND : " + total_Diamond_Amount);
+        
         winPanel.SetActive(true);
         win_diamondText.text = "x " + playerInteraction.diamondAmount;
         win_diamond5SideText.text = "x " + playerInteraction.diamond_5_side_Amount;

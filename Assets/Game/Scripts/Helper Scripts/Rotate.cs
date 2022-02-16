@@ -10,7 +10,6 @@ public class Rotate : MonoBehaviour
     void Update()
     {
         rotate();
-
     }
     void rotate()
     {

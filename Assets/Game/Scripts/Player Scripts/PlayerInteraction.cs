@@ -30,20 +30,15 @@ public class PlayerInteraction : MonoBehaviour
         
     }
 
-     void Update()
-    {
-        Debug.Log("HEALTH : " + health);
-        Debug.Log("EARNING : " + earning);
-    }
-
+     
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Tags.FINISHLINE)) {
             playerMovement.gameFinished = true;
             playerAnim.Victory(true);
-            Debug.Log("Health = "+ health);
-            Debug.Log("Diamond = " + diamondAmount);
-            Debug.Log("Diamond5SIDE = " + diamond_5_side_Amount);
+            //Debug.Log("Health = "+ health);
+            //Debug.Log("Diamond = " + diamondAmount);
+            //Debug.Log("Diamond5SIDE = " + diamond_5_side_Amount);
             gameManager.GameFinished();
 
         }
@@ -66,7 +61,7 @@ public class PlayerInteraction : MonoBehaviour
     }
      void OnCollisionEnter(Collision target)
     {
-        if (/* condition*/canHit&&target.gameObject.CompareTag(Tags.BARRIER)) {
+        if (canHit&&target.gameObject.CompareTag(Tags.BARRIER)) {
             canHit = false;
             Instantiate(barrierCollideEffect, this.transform.position + new Vector3(0, 2f, 5f), Quaternion.identity);
             hitBarrier();
@@ -85,7 +80,7 @@ public class PlayerInteraction : MonoBehaviour
         StartCoroutine(appearPlayer(0.3f));
         StartCoroutine(vanishPlayer(0.6f));
         StartCoroutine(appearPlayer(0.9f));
-        // add condition on hit
+        
 
     }
     IEnumerator vanishPlayer(float time) {

@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        playerInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteraction>();
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerInteraction = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerInteraction>();
+        playerMovement = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerMovement>();
         playerAnim = GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerAnimator>();
         levelNumber = PlayerPrefs.GetInt("Level", 1);
         fadeAnim = GameObject.Find("Fade").GetComponent<Animator>();
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         if (healths > 0)
         {
             healths--;
-            GameObject.FindGameObjectWithTag("Health").SetActive(false);
+            GameObject.FindGameObjectWithTag(Tags.HEALTH).SetActive(false);
         }
     }
     public void showDiamondsAmount(int diamondAmount) {
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator FadeIn(int SceneIndex)
     {
-        fadeAnim.SetTrigger("End");
+        fadeAnim.SetTrigger(AnimationTags.END);
         
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneIndex);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 public class Tags {
-    public const string PLAYER = "PLayer";
+    public const string PLAYER = "Player";
     public const string END_PLATFORM = "EndPlatform";
     public const string FINISHLINE = "FinishLine";
     public const string BARRIER = "barrier";

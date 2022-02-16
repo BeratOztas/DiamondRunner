@@ -9,6 +9,9 @@ TagManager:
   - barrier
   - Diamond
   - Diamond5side
+  - Dia5SideText
+  - DiamondText
+  - Health
   layers:
   - Default
   - TransparentFX

@@ -233,7 +233,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 227a993d804f9534d81fe592049cf0d6, type: 2}
+  - {fileID: 2100000, guid: 263ba34777e82274fac58088d39472e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -988,7 +988,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f2adddfdbc696114ab7627a7c204fb59, type: 2}
+  - {fileID: 2100000, guid: 263ba34777e82274fac58088d39472e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2054,7 +2054,7 @@ GameObject:
   - component: {fileID: 358944036}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2137,8 +2137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7fc61038da6e14e869eeb4958a83f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swerveSpeed: 1.5
-  maxSwerveAmount: 2
+  swerveSpeed: 0.4
+  maxSwerveAmount: 0.15
   moveSpeed: 20
   minX: -10
   maxX: 10

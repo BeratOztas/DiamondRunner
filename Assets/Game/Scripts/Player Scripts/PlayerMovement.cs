@@ -17,10 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveTemp;
     [SerializeField]
     private float minX, maxX;
-    [HideInInspector]
-    public bool gameStarted=true;
+    
     [HideInInspector]
     public bool gameFinished;
+    
+    [HideInInspector]
+    public bool gameOver;
+    
     void Awake()
     {
         myBody = GetComponent<Rigidbody>();
@@ -31,10 +34,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (gameStarted&&!gameFinished) { 
+        if (!gameFinished&&!gameOver) { 
            playerBounds();
            movePlayer();
         }
+        
+        
+        
     }
     void movePlayer() {
         moveTemp = transform.position;

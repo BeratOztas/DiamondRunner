@@ -10,6 +10,7 @@ public class GameUI : MonoBehaviour
     private GameManager gameManager;
     private PlayerInteraction playerInteraction;
     private int startHealth;
+    public GameObject topHud;
     [Header("WinScreen")]
     public GameObject winPanel;
     public Text win_diamondText, win_diamond5SideText;
@@ -47,6 +48,7 @@ public class GameUI : MonoBehaviour
         total_Diamond_Amount += playerInteraction.diamondAmount;
         total_Diamond5Side_Amount += playerInteraction.diamond_5_side_Amount;
         
+        topHud.SetActive(false);
         winPanel.SetActive(true);
         win_diamondText.text = "x " + playerInteraction.diamondAmount;
         win_diamond5SideText.text = "x " + playerInteraction.diamond_5_side_Amount;
